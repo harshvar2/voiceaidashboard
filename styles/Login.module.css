@@ -1,0 +1,143 @@
+.mask {
+  margin: 5% 10% 5% 10%;
+  border-radius: 14px;
+  box-shadow: 0 2px 24px 0 rgba(172, 172, 172, 0.5);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top:1rem;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.row>div{
+    flex:1.2;
+  }
+.img.BitmapCopy67 {
+  width: 7rem;
+  height: 3rem;
+  padding: 3rem;
+  object-fit: contain;
+}
+
+.Group9 {
+  object-fit: contain;
+  min-height: 10rem;
+  height:100%;
+  width: 100%;
+  
+}
+
+.Group8 {
+    object-fit: contain;
+    min-height: 10rem;
+    height:100%;
+    width: 95%;
+    
+  }
+
+.recordVoicesAcross {
+    justify-content: center;
+    align-items: center;
+  opacity: 0.8;
+  display: flex;
+  font-size: 16px;
+  font-size: 1.4vw;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+  padding-top:3rem;
+}
+.SignIn {
+
+    justify-content: center;
+    align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #00b9b9;
+  font-size: 5vw;
+}
+.username {
+  font-family: Roboto, "";
+  margin-left: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #80868b;
+}
+.Rectangle17 {
+  border-radius: 12px;
+  border: solid 1px #d4d6d7;
+  background-color: #fff;
+}
+.signInButton {
+    font-size: 3vw;
+    font-size: 3vh;
+    width: 14.438rem;
+    margin-top: 2rem;
+    height: 3.5rem;
+    border-radius: 59.5px;
+    border: solid 1px #f90;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #f90;
+    font-size: 1em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.form{
+    margin-top:10%;
+    padding-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+    .recordVoicesAcross{
+        font-size: 5vw;
+        padding-top: 0.5rem;
+    }
+    .SignIn{
+        padding-top: 1rem;
+        font-size:10vw;
+    }
+    .form{
+        margin: 7% 8% 0 8%;
+        padding-bottom:0;
+    }
+    .signInButton{
+        width:12rem;
+    }
+}
+@media(max-width:655px){
+    .mask {
+    margin:0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }

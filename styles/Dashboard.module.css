@@ -1,0 +1,123 @@
+.img.BitmapCopy67 {
+  width: 139.1px;
+  height: 56px;
+  object-fit: contain;
+}
+.navbar {
+  margin-left: 5%;
+}
+.navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 5%;
+  background-color: #fff;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dashboardText:focus,
+.dashboardText:active,
+.dashboardText:hover {
+  height: 50px;
+  font-size: 14px;
+  font-weight: bolder;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #00b9b9;
+  opacity: 1;
+  font-size: 1rem;
+}
+.navText:hover::before,
+.dashboardText::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  left: 40%;
+  bottom: 0;
+  border-bottom: 3px solid #00b9b9;
+}
+.navText {
+  opacity: 0.5;
+  font-weight: bolder;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-left: 1rem;
+  color: #000;
+  transition: all ease-in-out 0.2s;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.navText:focus,
+.navText:active,
+.navText:hover {
+  color: #00b9b9;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 1.2rem;
+}
+
+.oval {
+  width: 40px;
+  height: 40px;
+  margin: 8px 0 8px 40px;
+  padding-top: 0.4rem;
+  object-fit: contain;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+  border: solid 1px #fff;
+  border-radius: 50%;
+  background-color: #aa43ff;
+  text-align: center;
+  align-items: center;
+}
+.m {
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  align-self: center;
+  color: #fff;
+}
+
+.chooseYourSurrounding {
+  font-size: 28px;
+  font-weight: bolder;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #00a4a4;
+}
+.Fabars {
+  position: absolute;
+  margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0rem;
+  }
+  .navbarContainer {
+    flex-direction: column;
+    margin-top: 0;
+    background-color: white;
+  }
+  .chooseYourSurrounding {
+    padding-left: 0.3rem;
+    font-size: 15px;
+  }
+}
