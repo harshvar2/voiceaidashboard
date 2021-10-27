@@ -109,7 +109,11 @@
   background-color: #f90;
   color: #fff;
 }
-.signInButton:hover{
+.signInButton:default{
+  background-color: #f90;
+  color: #fff;
+}
+.signInButton:after{
   background-color: #f90;
   color: #fff;
 }
