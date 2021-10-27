@@ -10,8 +10,8 @@ function login() {
     const [password, setPassword] = useState("");
     const [loginError, setLoginError] = useState("");
     const [isLoading, setIsLoading] = useState(false)
+    const [isValidDetails, setIsValidDetails] =  useState(true)
     const handleSubmit = event => {
-        setIsLoading(!isLoading);
         event.preventDefault();
         axios.post('https://reqres.in/api/login', {
             email: email,
@@ -59,7 +59,7 @@ function login() {
                                     </FloatingLabel>
                                  
                                     <button className={styles.signInButton} disabled={!(email.length > 0 && password.length > 0)} type="submit">
-                                    
+                                 
                                         {/* <Image src="/images/rectangle-9.png"
                                             srcset="/images/rectangle-9@2x.png 2x,
                                         /images/rectangle-9@3x.png 3x"type="submit" width="231px" height="56px"  ></Image> */}
