@@ -74,8 +74,6 @@
   .grid {
     width: 100%;
     grid-template-columns: 1fr;
-    padding-left:1rem;
-    margin-right:1rem;
     margin-top: 0;
   }
 }
