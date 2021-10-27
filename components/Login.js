@@ -4,18 +4,21 @@ import React, { useState } from 'react'
 import styles from '../styles/Login.module.css';
 import axios from 'axios';
 import Router from 'next/router'
-import { Row, Col, Container, Form, FloatingLabel, Button } from 'react-bootstrap';
+import { Row, Col, Container, Form, FloatingLabel, Button,Spinner } from 'react-bootstrap';
 function login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loginError, setLoginError] = useState("");
+    const [isLoading, setIsLoading] = useState(false)
     const handleSubmit = event => {
+        setIsLoading(!isLoading);
         event.preventDefault();
         axios.post('https://reqres.in/api/login', {
             email: email,
             password: password,
         })
             .then(() => {
+                setIsLoading(!isLoading);
                 Router.push('/home');
             })
             .catch(() => {
@@ -54,7 +57,9 @@ function login() {
                                     <FloatingLabel controlId="floatingPassword" label="Password">
                                         <Form.Control type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
                                     </FloatingLabel>
-                                    <button className={styles.signInButton} type="submit">
+                                 
+                                    <button className={styles.signInButton} disabled={!(email.length > 0 && password.length > 0)} type="submit">
+                                    
                                         {/* <Image src="/images/rectangle-9.png"
                                             srcset="/images/rectangle-9@2x.png 2x,
                                         /images/rectangle-9@3x.png 3x"type="submit" width="231px" height="56px"  ></Image> */}
@@ -62,6 +67,9 @@ function login() {
                                     </button>
                                     {loginError && <p >{loginError}</p>}
                                 </Form>
+                            </Row>
+                            <Row className="d-flex align-center mx-md-auto pb-2">
+                            {isLoading && <Spinner animation="border" />}
                             </Row>
                         </Col>
                         <Col className="text-end d-none d-md-block"><img src="/images/group-8.png"

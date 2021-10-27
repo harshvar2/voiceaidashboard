@@ -109,7 +109,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 0rem;
+    margin-top: 0rem;
+    padding-bottom: 1rem;
   }
   .navbarContainer {
     flex-direction: column;
@@ -118,6 +119,6 @@
   }
   .chooseYourSurrounding {
     padding-left: 0.3rem;
-    font-size: 15px;
+    font-size: 1.3rem;
   }
 }

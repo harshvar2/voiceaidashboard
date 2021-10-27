@@ -66,7 +66,8 @@ const data =
 const Dashboard = () => {
     return (
         <div >
-            <Navbar  sticky="top">
+           
+            <Navbar  sticky="top" className="pt-0">
                 <Navbar.Brand className={`d-block d-md-none ${styles.Fabars}`} size="3x"  ><FaBars /></Navbar.Brand>
                 <Container fluid className={styles.navbarContainer}>
                     <div href="#home" className={styles.navbar}><img src="/images/bitmap-copy-67.jpg" srcSet="/images/bitmap-copy-67@2x.jpg 2x,
