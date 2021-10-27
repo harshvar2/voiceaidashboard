@@ -3,6 +3,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap'
 import styles from '../styles/Dashboard.module.css'
 import DashboardContents from '../components/DashboardContents'
 import { FaBars } from "react-icons/fa"
+import Sidebar from './Sidebar';
 const data =
     [
         {
@@ -66,12 +67,15 @@ const data =
 const Dashboard = () => {
     return (
         <div >
-           
-            <Navbar  sticky="top" className="pt-0">
-                <Navbar.Brand className={`d-block d-md-none ${styles.Fabars}`} size="3x"  ><FaBars /></Navbar.Brand>
+            <div className={`d-block d-md-none ${styles.Sidebar}`}>
+                <Sidebar />
+            </div>
+            <Navbar sticky="top" className="pt-0">
+
                 <Container fluid className={styles.navbarContainer}>
+
                     <div href="#home" className={styles.navbar}><img src="/images/bitmap-copy-67.jpg" srcSet="/images/bitmap-copy-67@2x.jpg 2x,
-             /images/bitmap-copy-67@3x.jpg 3x" alt="Avatar" className={styles.img.BitmapCopy67} /></div>
+             /images/bitmap-copy-67@3x.jpg 3x" alt="Avatar" width="44px" /></div>
                     <Navbar className="d-flex flex-column d-none d-md-flex flex-md-row  ms-md-auto align-items-center collapse-navbar-collapse">
                         <Nav.Link href="#DASHBOARD" className={styles.navText} >DASHBOARD</Nav.Link>
                         <Nav.Link href="#STATS" className={styles.navText}>MY STATS</Nav.Link>
@@ -85,7 +89,7 @@ const Dashboard = () => {
                     </Navbar>
                 </Container>
             </Navbar>
-            <div className="d-flex justify-content-center align-content-center">
+            <div className="d-flex justify-content-center align-items-center">
                 <span className={styles.chooseYourSurrounding}>Chooose your Surrounding </span>
             </div>
             <DashboardContents contents={data} />

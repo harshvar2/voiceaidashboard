@@ -1,6 +1,6 @@
 .img.BitmapCopy67 {
-  width: 139.1px;
-  height: 56px;
+  width: 1rem;
+  height: 2rem;
   object-fit: contain;
 }
 .navbar {
@@ -114,11 +114,34 @@
   }
   .navbarContainer {
     flex-direction: column;
-    margin-top: 0;
-    background-color: white;
+    margin: 0;
   }
   .chooseYourSurrounding {
-    padding-left: 0.3rem;
     font-size: 1.3rem;
+    
   }
+}
+@media(max-width:655px){
+  .chooseYourSurrounding {
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media(max-width:320px){
+  .chooseYourSurrounding {
+    font-size: 1.3rem;
+    width: 100%;
+    padding-left: 2rem;
+    padding-bottom: 0;
+  }
+}
+.Sidebar{
+  position:fixed;
+  z-index:10000;
+  margin-top:1.6rem;
+}
+.sidebarHeader{
+  z-index:1000000;
+  width: 50%;
 }
