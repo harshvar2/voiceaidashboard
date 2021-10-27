@@ -5,6 +5,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-row-gap: 1.5rem;
   grid-column-gap: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
 }
 .card {
   display: flex;
@@ -50,11 +52,13 @@
 @media (max-width: 1250px) {
   .grid {
     grid-template-columns: 1fr 1fr;
+    margin:0;
   }
 }
 @media (max-width: 1060px) {
   .grid {
     grid-template-columns: 1fr 1fr;
+    margin:0;
   }
 }
 
@@ -62,6 +66,7 @@
   .grid {
     width: 100%;
     padding:2rem;
+    margin:0;
   }
 }
 
