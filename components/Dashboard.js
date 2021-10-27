@@ -75,7 +75,7 @@ const Dashboard = () => {
                 <Container fluid className={styles.navbarContainer}>
 
                     <div href="#home" className={styles.navbar}><img src="/images/bitmap-copy-67.jpg" srcSet="/images/bitmap-copy-67@2x.jpg 2x,
-             /images/bitmap-copy-67@3x.jpg 3x" alt="Avatar" width="44px" /></div>
+             /images/bitmap-copy-67@3x.jpg 3x" alt="Avatar" className={styles.img.BitmapCopy67} /></div>
                     <Navbar className="d-flex flex-column d-none d-md-flex flex-md-row  ms-md-auto align-items-center collapse-navbar-collapse">
                         <Nav.Link href="#DASHBOARD" className={styles.navText} >DASHBOARD</Nav.Link>
                         <Nav.Link href="#STATS" className={styles.navText}>MY STATS</Nav.Link>
