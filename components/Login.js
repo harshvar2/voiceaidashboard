@@ -58,13 +58,13 @@ function login() {
                                         <Form.Control type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
                                     </FloatingLabel>
                                  
-                                    <button className={styles.signInButton} disabled={!(email.length > 0 && password.length > 0)} type="submit">
+                                    <Button className={styles.signInButton} variant="warning" disabled={!(email.length > 0 && password.length > 0)} type="submit">
                                  
                                         {/* <Image src="/images/rectangle-9.png"
                                             srcset="/images/rectangle-9@2x.png 2x,
                                         /images/rectangle-9@3x.png 3x"type="submit" width="231px" height="56px"  ></Image> */}
                                         <span className={styles.signInButtonText}>SIGN IN</span>
-                                    </button>
+                                    </Button>
                                     {loginError && <p >{loginError}</p>}
                                 </Form>
                             </Row>

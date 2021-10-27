@@ -105,6 +105,10 @@
     text-align: center;
     color: #fff;
 }
+.signInButton:disabled{
+  background-color: #f90;
+  color: #fff;
+}
 .mainContainer{
     display: flex;
     flex-direction: column;
