@@ -68,14 +68,14 @@ function login() {
                                     {loginError && <p >{loginError}</p>}
                                 </Form>
                             </Row>
-                            <Row className=" align-center mx-md-auto pb-2 d-sm-none d-md-block">
-                            {isLoading && <Spinner animation="border" />}
-                            </Row>
                         </Col>
                         <Col className="text-end d-none d-md-block"><img src="/images/group-8.png"
                             srcset="/images/group-8@2x.png 2x,
                              /images/group-8@3x.png 3x"className={styles.Group8} alt="Avatar" /></Col>
                     </Row>
+                    <Row className={styles.Group9}>
+                            {isLoading && <Spinner animation="border" />}
+                            </Row>
                     <Row className="d-block d-md-none">
                         <img src="/images/group-3.png"
                             srcset="/images/group-3@2x.png 2x,
