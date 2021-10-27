@@ -68,7 +68,7 @@ function login() {
                                     {loginError && <p >{loginError}</p>}
                                 </Form>
                             </Row>
-                            <Row className="d-block align-center mx-md-auto pb-2">
+                            <Row className=" align-center mx-md-auto pb-2 d-sm-none d-md-block">
                             {isLoading && <Spinner animation="border" />}
                             </Row>
                         </Col>
