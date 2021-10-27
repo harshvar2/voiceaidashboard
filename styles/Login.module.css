@@ -109,6 +109,10 @@
   background-color: #f90;
   color: #fff;
 }
+.signInButton:hover{
+  background-color: #f90;
+  color: #fff;
+}
 .mainContainer{
     display: flex;
     flex-direction: column;
