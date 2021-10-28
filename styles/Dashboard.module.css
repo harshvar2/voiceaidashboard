@@ -88,7 +88,7 @@
   color: #fff;
 }
 
-.chooseYourSurrounding {
+.subHeading {
   font-size: 28px;
   font-weight: bolder;
   font-stretch: normal;
@@ -116,20 +116,20 @@
     flex-direction: column;
     margin: 0;
   }
-  .chooseYourSurrounding {
+  .subHeading {
     font-size: 1.3rem;
     
   }
 }
 @media(max-width:655px){
-  .chooseYourSurrounding {
+  .subHeading {
     font-size: 1.3rem;
     width: 100%;
     text-align: center;
   }
 }
 @media(max-width:320px){
-  .chooseYourSurrounding {
+  .subHeading {
     font-size: 1.3rem;
     width: 100%;
     padding-left: 2rem;

@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Voice AI </title>
-        <meta name="description" content=" Voice AI " />
+        <title>Bobble AI</title>
+        <meta name="description" content=" BobbleAI Voice AI " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
     <Login/>

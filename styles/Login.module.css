@@ -40,7 +40,7 @@
     
   }
 
-.recordVoicesAcross {
+.subHeading {
     justify-content: center;
     align-items: center;
   opacity: 0.8;
@@ -128,7 +128,7 @@
 }
 
 @media (max-width: 768px) {
-    .recordVoicesAcross{
+    .subHeading{
         font-size: 5vw;
         padding-top: 0.5rem;
     }

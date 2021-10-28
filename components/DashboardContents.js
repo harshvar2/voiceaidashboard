@@ -1,11 +1,10 @@
 import styles from '../styles/DashboardContents.module.css'
-import Image from 'next/image'
 
-const DashboardContents = ({contents}) => {
+const DashboardContents = ({dashboardContent}) => {
     return (
-        <div className={styles.grid}>
+        <>
             {
-                contents.map((obj,index)=> (
+                dashboardContent.data.map((obj,index)=> (
                     <div key={obj.id} className={styles.card}>
                       <div>
                       <img src={obj.imgUrl}  className={styles.image} alt="Avatar"/>
@@ -18,7 +17,7 @@ const DashboardContents = ({contents}) => {
                 )
                 )
             }
-        </div>
+            </>
     )
 }
 
