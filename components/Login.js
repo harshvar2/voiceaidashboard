@@ -12,32 +12,27 @@ function login() {
     const [password, setPassword] = useState("");
     const [loginError, setLoginError] = useState("");
     const [isLoading, setIsLoading] = useState(false)
-    const [loggedIn, setLoggedIn] = useState()
     const router = useRouter()
- 
+
     const handleSubmit = async (event) => {
         event.preventDefault();
-        setIsLoading(!isLoading)
-      
-        verifyCredentials(email, password)
-        let token =localStorage.getItem("token")
-        if (token) {
-            setLoggedIn(true)
+        setIsLoading(true)
+
+        let accessToken = await verifyCredentials(email, password)
+        console.log(accessToken)
+        console.log("helo" + accessToken)
+        if (accessToken) {
             router.push('/home')
         }
         else {
-            setLoggedIn(false)
+            setIsLoading(!isLoading)
             setLoginError("Invalid Username or Password")
         }
+        setIsLoading(false)
     }
-    // useEffect(() => {
-    //     if (loggedIn == true)
-    //         return ()
-    //     if (token != null) {
-    //         return (router.push('/home'))
-    //     }
-       
-    // }, [loggedIn,handleSubmit,isLoading])
+    useEffect(() => {
+
+    }, [isLoading])
 
     return (
         <div >
@@ -75,11 +70,11 @@ function login() {
                                     <Button className={styles.signInButton} variant="warning" disabled={!(email.length > 0 && password.length > 0)} type="submit">
                                         <span className={styles.signInButtonText}>SIGN IN</span>
                                     </Button>
-                                    <Expire delay="5000"><Row className="d-flex align-center justify-content-center">
+                                   <Row className="d-flex align-center justify-content-center">
                                         {isLoading && <Spinner animation="border" />}
-                                    </Row></Expire>
+                                    </Row>
 
-                                    
+
                                     {loginError && <p >{loginError}</p>}
                                 </Form>
                             </Row>
