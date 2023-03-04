@@ -5,39 +5,36 @@ import styles from '../styles/Login.module.css';
 import { useRouter } from 'next/router'
 import { useEffect, useCallback } from 'react';
 import { verifyCredentials } from '../utils/apiUtils'
-import Expire from './Expire'
+
 import { Row, Col, Container, Form, FloatingLabel, Button, Spinner } from 'react-bootstrap';
 function login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loginError, setLoginError] = useState("");
     const [isLoading, setIsLoading] = useState(false)
-    const [loggedIn, setLoggedIn] = useState()
+    const [loggedIn, setLoggedIn] = useState(false)
     const router = useRouter()
- 
+    let token
     const handleSubmit = async (event) => {
         event.preventDefault();
         setIsLoading(!isLoading)
-      
-        verifyCredentials(email, password)
-        let token =localStorage.getItem("token")
-        if (token) {
-            setLoggedIn(true)
-            router.push('/home')
-        }
-        else {
+        await verifyCredentials(email, password)
+        token = await localStorage.getItem("token")
+        if (token == null) {
             setLoggedIn(false)
             setLoginError("Invalid Username or Password")
         }
+        else {
+            setLoggedIn(true)
+        }
     }
-    // useEffect(() => {
-    //     if (loggedIn == true)
-    //         return ()
-    //     if (token != null) {
-    //         return (router.push('/home'))
-    //     }
-       
-    // }, [loggedIn,handleSubmit,isLoading])
+    useEffect(() => {
+        if (loggedIn == true)
+            return (router.push('/home'))
+        if (token != null) {
+            return (router.push('/home'))
+        }
+    }, [loggedIn])
 
     return (
         <div >
@@ -75,11 +72,9 @@ function login() {
                                     <Button className={styles.signInButton} variant="warning" disabled={!(email.length > 0 && password.length > 0)} type="submit">
                                         <span className={styles.signInButtonText}>SIGN IN</span>
                                     </Button>
-                                    <Expire delay="5000"><Row className="d-flex align-center justify-content-center">
+                                    <Row className="d-flex align-center justify-content-center">
                                         {isLoading && <Spinner animation="border" />}
-                                    </Row></Expire>
-
-                                    
+                                    </Row>
                                     {loginError && <p >{loginError}</p>}
                                 </Form>
                             </Row>
